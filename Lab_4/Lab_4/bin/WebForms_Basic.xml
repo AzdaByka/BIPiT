@@ -1,0 +1,140 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Lab_4
+</name>
+</assembly>
+<members>
+<member name="T:Lab_4.My.MyWebExtension">
+ <summary>
+ Модуль, используемый для определения свойств, доступных в My Namespace для веб-проектов.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Lab_4.My.MyWebExtension.Computer">
+ <summary>
+ Возвращает информацию о главном компьютере.
+ </summary>
+</member>
+<member name="P:Lab_4.My.MyWebExtension.User">
+ <summary>
+ Возвращает сведения о текущем веб-пользователе.
+ </summary>
+</member>
+<member name="P:Lab_4.My.MyWebExtension.Request">
+ <summary>
+ Возвращает объект Request.
+ </summary>
+</member>
+<member name="P:Lab_4.My.MyWebExtension.Response">
+ <summary>
+ Возвращает объект Response.
+ </summary>
+</member>
+<member name="P:Lab_4.My.MyWebExtension.Log">
+ <summary>
+ Возвращает объект журнала ASP.
+ </summary>
+</member>
+<member name="F:Lab_4.SiteMaster._MainContent">
+<summary>
+MainContent элемент управления.
+</summary>
+<remarks>
+Автоматически создаваемое поле.
+Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+</remarks>
+</member>
+<member name="F:Lab_4.Table._GridView1">
+<summary>
+GridView1 элемент управления.
+</summary>
+<remarks>
+Автоматически создаваемое поле.
+Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+</remarks>
+</member>
+<member name="F:Lab_4.Table._Button1">
+<summary>
+Button1 элемент управления.
+</summary>
+<remarks>
+Автоматически создаваемое поле.
+Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+</remarks>
+</member>
+<member name="F:Lab_4.Table._SqlDataSource1">
+<summary>
+SqlDataSource1 элемент управления.
+</summary>
+<remarks>
+Автоматически создаваемое поле.
+Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+</remarks>
+</member>
+<member name="F:Lab_4.Site_Mobile._Head1">
+<summary>
+Элемент управления Head1.
+</summary>
+<remarks>
+Автоматически созданное поле.
+Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+</remarks>
+</member>
+<member name="F:Lab_4.Site_Mobile._HeadContent">
+<summary>
+Элемент управления HeadContent.
+</summary>
+<remarks>
+Автоматически созданное поле.
+Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+</remarks>
+</member>
+<member name="F:Lab_4.Site_Mobile._form1">
+<summary>
+элемент управления form1.
+</summary>
+<remarks>
+Автоматически созданное поле.
+Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+</remarks>
+</member>
+<member name="F:Lab_4.Site_Mobile._FeaturedContent">
+<summary>
+Элемент управления FeaturedContent.
+</summary>
+<remarks>
+Автоматически созданное поле.
+Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+</remarks>
+</member>
+<member name="F:Lab_4.Site_Mobile._MainContent">
+<summary>
+Элемент управления MainContent.
+</summary>
+<remarks>
+Автоматически созданное поле.
+Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+</remarks>
+</member>
+<member name="F:Lab_4.Site_Mobile._ViewSwitcher1">
+<summary>
+Элемент управления ViewSwitcher1.
+</summary>
+<remarks>
+Автоматически созданное поле.
+Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+</remarks>
+</member>
+<member name="F:Lab_4.WebForm1._Button1">
+<summary>
+Button1 элемент управления.
+</summary>
+<remarks>
+Автоматически создаваемое поле.
+Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+</remarks>
+</member>
+</members>
+</doc>
