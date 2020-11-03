@@ -16,6 +16,12 @@ namespace Server_1
         void DoWork();
 
         [OperationContract]
+        void ConnectionInfo(string name, string port, string localPath, string uri, string scheme);
+
+        [OperationContract]
+        void CountOfDBRows(string count);
+
+        [OperationContract]
         DataTable GetData();
 
         [OperationContract]

@@ -21,6 +21,18 @@ namespace Client.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DoWork", ReplyAction="http://tempuri.org/IService1/DoWorkResponse")]
         System.Threading.Tasks.Task DoWorkAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ConnectionInfo", ReplyAction="http://tempuri.org/IService1/ConnectionInfoResponse")]
+        void ConnectionInfo(string name, string port, string localPath, string uri, string scheme);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ConnectionInfo", ReplyAction="http://tempuri.org/IService1/ConnectionInfoResponse")]
+        System.Threading.Tasks.Task ConnectionInfoAsync(string name, string port, string localPath, string uri, string scheme);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CountOfDBRows", ReplyAction="http://tempuri.org/IService1/CountOfDBRowsResponse")]
+        void CountOfDBRows(string count);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CountOfDBRows", ReplyAction="http://tempuri.org/IService1/CountOfDBRowsResponse")]
+        System.Threading.Tasks.Task CountOfDBRowsAsync(string count);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
         System.Data.DataTable GetData();
         
@@ -85,6 +97,22 @@ namespace Client.ServiceReference1 {
         
         public System.Threading.Tasks.Task DoWorkAsync() {
             return base.Channel.DoWorkAsync();
+        }
+        
+        public void ConnectionInfo(string name, string port, string localPath, string uri, string scheme) {
+            base.Channel.ConnectionInfo(name, port, localPath, uri, scheme);
+        }
+        
+        public System.Threading.Tasks.Task ConnectionInfoAsync(string name, string port, string localPath, string uri, string scheme) {
+            return base.Channel.ConnectionInfoAsync(name, port, localPath, uri, scheme);
+        }
+        
+        public void CountOfDBRows(string count) {
+            base.Channel.CountOfDBRows(count);
+        }
+        
+        public System.Threading.Tasks.Task CountOfDBRowsAsync(string count) {
+            return base.Channel.CountOfDBRowsAsync(count);
         }
         
         public System.Data.DataTable GetData() {

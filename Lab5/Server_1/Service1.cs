@@ -17,6 +17,24 @@ namespace Server_1
 
         }
 
+
+        public void ConnectionInfo(string name, string port, string localPath, string uri, string scheme)
+        {
+            Console.WriteLine();
+            Console.WriteLine("***** Host Info *****");
+            Console.WriteLine($"Name: {name}");
+            Console.WriteLine($"Port: {port}");
+            Console.WriteLine($"LocalPath: {localPath}");
+            Console.WriteLine($"Uri: {uri}");
+            Console.WriteLine($"Scheme: {scheme}");
+            Console.WriteLine("***********************************");
+            Console.WriteLine();
+        }
+
+        public void CountOfDBRows(string count)=>       
+            Console.WriteLine($"Количество записей в БД: {count}");
+        
+
         public DataTable GetData()
         {
             var query = "SELECT [Order].id_Order, [Order].id_Client_FK, [Client].FIO, [Order].id_Bus_Fk, [Bus].Name_car, [Order].date, [Order].cost " +
@@ -97,15 +115,6 @@ namespace Server_1
             command.CommandText = query;
             command.ExecuteNonQuery();
             connect.Close();
-            using (var con=new SqlConnection(query))
-            {
-                using (var cmd = new SqlCommand(query))
-                {
-                    cmd.Connection = con;
-                    cmd.CommandText = query;
-                    cmd.ExecuteNonQuery();
-                }
-            }
             return "Готово";
         }
 
