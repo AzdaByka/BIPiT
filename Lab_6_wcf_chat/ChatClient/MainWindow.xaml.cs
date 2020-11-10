@@ -60,6 +60,7 @@ namespace ChatClient
         public void MessageCallBack(string message)
         {
             lbChat.Items.Add(message);
+            lbChat.ScrollIntoView(lbChat.Items[lbChat.Items.Count-1]);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -73,13 +74,9 @@ namespace ChatClient
 
         private void TextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key==Key.Enter)
-            {
-                client?.SendMessage(message.Text,ID);
-                message.Text = "";
-
-            }
-
+            if (e.Key != Key.Enter) return;
+            client?.SendMessage(message.Text,ID);
+            message.Text = "";
         }
     }
 }
