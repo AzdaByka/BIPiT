@@ -44,15 +44,16 @@ namespace Client_Web
             var id_Bus = DropDownList2.Text;
             var date = this.dateXEP.Text;
             var cost = this.cost.Text;
-            var check = sessionClient.RecCheck(id_Client, id_Bus, date, cost);
-            if (check == "1")
+            if (sessionClient.RecCheck(id_Client, id_Bus, date, cost) == "1")
             {
                 Label2.Visible = true;
+                Label1.Visible = false;
             }
             else
             {
                 Label1.Text = sessionClient.InsertMethod(id_Client, id_Bus, date, cost);
                 Label1.Visible = true;
+                Label2.Visible = false;
                 Response.Redirect("/TableWithAdd");
             }
         }
