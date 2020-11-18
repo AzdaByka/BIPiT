@@ -40,10 +40,10 @@ namespace wcf_chat
 
         public void SendMessage(string message, int id)
         {
+            var userSender = Users.FirstOrDefault(i => i.ID == id);
             foreach (var user in Users)
             {
                 string answer = DateTime.Now.ToShortTimeString();
-                var userSender = Users.FirstOrDefault(i => i.ID == id);
                 if (userSender != null)
                     answer += ": " + userSender.Name + " ";
                 answer +=" "+ message;

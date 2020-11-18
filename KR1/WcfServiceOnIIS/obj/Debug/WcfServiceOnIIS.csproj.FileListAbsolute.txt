@@ -1,0 +1,7 @@
+C:\Works\БИПиТ\KR1\WcfServiceOnIIS\bin\WcfServiceOnIIS.dll.config
+C:\Works\БИПиТ\KR1\WcfServiceOnIIS\bin\WcfServiceOnIIS.dll
+C:\Works\БИПиТ\KR1\WcfServiceOnIIS\bin\WcfServiceOnIIS.pdb
+C:\Works\БИПиТ\KR1\WcfServiceOnIIS\obj\Debug\WcfServiceOnIIS.csproj.CoreCompileInputs.cache
+C:\Works\БИПиТ\KR1\WcfServiceOnIIS\obj\Debug\WcfServiceOnIIS.dll
+C:\Works\БИПиТ\KR1\WcfServiceOnIIS\obj\Debug\WcfServiceOnIIS.pdb
+C:\Works\БИПиТ\KR1\WcfServiceOnIIS\obj\Debug\WcfServiceOnIIS.csprojAssemblyReference.cache
