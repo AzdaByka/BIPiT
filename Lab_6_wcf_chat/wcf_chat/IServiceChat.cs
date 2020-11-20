@@ -19,6 +19,9 @@ namespace wcf_chat
 
         [OperationContract(IsOneWay = true)]
         void SendMessage(string message, int id);
+
+        [OperationContract]
+        List<string> GetMessageHistory();
     }
 
     [ServiceContract]

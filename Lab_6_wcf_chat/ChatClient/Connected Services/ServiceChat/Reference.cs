@@ -32,6 +32,12 @@ namespace ChatClient.ServiceChat {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServiceChat/SendMessage")]
         System.Threading.Tasks.Task SendMessageAsync(string message, int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceChat/GetMessageHistory", ReplyAction="http://tempuri.org/IServiceChat/GetMessageHistoryResponse")]
+        string[] GetMessageHistory();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceChat/GetMessageHistory", ReplyAction="http://tempuri.org/IServiceChat/GetMessageHistoryResponse")]
+        System.Threading.Tasks.Task<string[]> GetMessageHistoryAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -91,6 +97,14 @@ namespace ChatClient.ServiceChat {
         
         public System.Threading.Tasks.Task SendMessageAsync(string message, int id) {
             return base.Channel.SendMessageAsync(message, id);
+        }
+        
+        public string[] GetMessageHistory() {
+            return base.Channel.GetMessageHistory();
+        }
+        
+        public System.Threading.Tasks.Task<string[]> GetMessageHistoryAsync() {
+            return base.Channel.GetMessageHistoryAsync();
         }
     }
 }

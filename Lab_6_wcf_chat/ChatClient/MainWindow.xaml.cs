@@ -34,6 +34,10 @@ namespace ChatClient
         {
             client = new ServiceChatClient(new InstanceContext(this));
             ID = client.Connect(nameUser.Text);
+            var messageHistory= client.GetMessageHistory();
+            lbChat.Items.Clear();
+            foreach (var item in messageHistory)
+                lbChat.Items.Add(item);
             nameUser.IsEnabled = false;
             connect.Content="Disconnect";
             IsConnected = true;

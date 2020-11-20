@@ -11,8 +11,9 @@ namespace wcf_chat
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class ServiceChat : IServiceChat
     {
-        List<ServerUser> Users = new List<ServerUser>();
+        readonly List<ServerUser> Users = new List<ServerUser>();
         private int nextId = 1;
+        readonly List<string> messageHistory = new List<string>();
 
         public int Connect(string name)
         {
@@ -36,7 +37,7 @@ namespace wcf_chat
             SendMessage(user.Name+" покинул чат!",0);
         }
 
-
+        public List<string> GetMessageHistory() => messageHistory;
 
         public void SendMessage(string message, int id)
         {
@@ -47,6 +48,7 @@ namespace wcf_chat
                 if (userSender != null)
                     answer += ": " + userSender.Name + " ";
                 answer +=" "+ message;
+                messageHistory.Add(answer);
                 user.OperationContext.GetCallbackChannel<IServerChatCallBack>().MessageCallBack(answer);
             }
         }

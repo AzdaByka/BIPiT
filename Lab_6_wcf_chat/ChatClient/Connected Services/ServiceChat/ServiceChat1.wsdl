@@ -33,6 +33,7 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:9001/Design_Time_Addresses/wcf_chat/ServiceChat/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:9001/Design_Time_Addresses/wcf_chat/ServiceChat/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9001/Design_Time_Addresses/wcf_chat/ServiceChat/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IServiceChat_Connect_InputMessage">
@@ -50,6 +51,12 @@
   <wsdl:message name="IServiceChat_SendMessage_InputMessage">
     <wsdl:part name="parameters" element="tns:SendMessage" />
   </wsdl:message>
+  <wsdl:message name="IServiceChat_GetMessageHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageHistory" />
+  </wsdl:message>
+  <wsdl:message name="IServiceChat_GetMessageHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageHistoryResponse" />
+  </wsdl:message>
   <wsdl:message name="IServiceChat_MessageCallBack_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:MessageCallBack" />
   </wsdl:message>
@@ -64,6 +71,10 @@
     </wsdl:operation>
     <wsdl:operation name="SendMessage">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceChat/SendMessage" message="tns:IServiceChat_SendMessage_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceChat/GetMessageHistory" message="tns:IServiceChat_GetMessageHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceChat/GetMessageHistoryResponse" message="tns:IServiceChat_GetMessageHistory_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="MessageCallBack">
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceChat/MessageCallBack" message="tns:IServiceChat_MessageCallBack_OutputCallbackMessage" />
@@ -95,6 +106,15 @@
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageHistory">
+      <soap12:operation soapAction="http://tempuri.org/IServiceChat/GetMessageHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="MessageCallBack">
       <soap12:operation soapAction="http://tempuri.org/IServiceChat/MessageCallBack" style="document" />
