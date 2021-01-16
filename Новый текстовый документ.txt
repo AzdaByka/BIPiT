@@ -1,0 +1,32 @@
+        public ActionResult Index()
+        {
+            var ordersDbSet = rent.Order;
+            var orders = ordersDbSet.Select(item => new SelectListItem {Text =
+                $"{item.Bus} | {item.Client} | {item.date} | {item.cost}", Value = item.id_Order.ToString()}).ToList();
+            ViewBag.Order = orders;
+            return View(rent.Order.ToList());
+        }
+
+        public ActionResult Clients()
+        {
+            ViewBag.Message = "Клиенты";
+            var clientsDbSet = rent.Client;
+            var clients = clientsDbSet.Select(item => new SelectListItem {Text =
+                $"{item.FIO} | {item.TEL}", Value = item.id_Client.ToString()}).ToList();
+            ViewBag.Client = clients;
+            return View(rent.Client.ToList());
+        }
+
+        public ActionResult Bus()
+        {
+            ViewBag.Message = "Автобусы";
+            var busDbSet = rent.Bus;
+            var clients = busDbSet.Select(item => new SelectListItem
+            {
+                Text =
+                    $"{item.Name_car} | {item.VIN}",
+                Value = item.id_Bus.ToString()
+            }).ToList();
+            ViewBag.Bus = clients;
+            return View(rent.Bus.ToList());
+        }
